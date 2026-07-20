@@ -10,7 +10,8 @@ class PrefixeModel extends Model
     protected $primaryKey = 'id';
     protected $useTimestamps = false;
     protected $allowedFields = [
-        'prefix'
+        'prefix',
+        'id_operateur'
     ];
     public function isNumeroValide($numero)
     {

@@ -57,7 +57,9 @@ CREATE TABLE transferts (
 
 CREATE TABLE prefixes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    prefix TEXT UNIQUE NOT NULL
+    prefix TEXT UNIQUE NOT NULL,
+    id_operateur INTEGER NOT NULL,
+    FOREIGN KEY (id_operateur) REFERENCES operateurs(id)
 );
 
 CREATE INDEX idx_transactions_client ON transactions(client_id);
