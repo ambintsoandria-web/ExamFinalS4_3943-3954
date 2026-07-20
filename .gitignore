@@ -1,0 +1,19 @@
+# Ignorer les bases de données SQLite
+*.db
+*.sqlite
+*.sqlite3
+writable/db/
+writable/db/*.db
+writable/*.db
+
+# Ignorer les fichiers de verrouillage SQLite
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Ignorer le dossier writable (optionnel)
+writable/
+!writable/.gitkeep
+writable/db/mobile_money.db
+writable/db/mobile_money.db
+/writable/db

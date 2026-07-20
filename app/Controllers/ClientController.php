@@ -165,6 +165,7 @@ class ClientController extends BaseController
         }
         return view('Client/dashboard', [
             'client' => $client,
+            'stats' => $this->transactionModel->getStatsClient($client['id']),
             'title' => 'Mon espace client',
             'active' => 'dashboard',
         ]);

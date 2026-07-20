@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/operateur.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/situation.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/gains.css') ?>">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </head>
 
 <body>

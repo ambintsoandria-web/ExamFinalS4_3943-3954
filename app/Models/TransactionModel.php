@@ -42,4 +42,29 @@ class TransactionModel extends Model
             ->first();
     }
 
+    public function getStatsClient($clientId)
+    {
+        return $this->select('types_operations.nom, COUNT(transactions.id) as total, SUM(transactions.montant) as montant')
+            ->join('types_operations', 'types_operations.id = transactions.type_operation_id')
+            ->where('transactions.client_id', $clientId)
+            ->groupBy('types_operations.id')
+            ->findAll();
+    }
+
+    public function getStatsGlobales()
+    {
+        return $this->select('types_operations.nom, COUNT(transactions.id) as total, SUM(transactions.montant) as montant')
+            ->join('types_operations', 'types_operations.id = transactions.type_operation_id')
+            ->groupBy('types_operations.id')
+            ->findAll();
+    }
+
+    public function getActiviteRecente()
+    {
+        return $this->select("DATE(date_transaction) as jour, COUNT(id) as total")
+            ->groupBy('DATE(date_transaction)')
+            ->orderBy('jour', 'DESC')
+            ->findAll(7);
+    }
+
 }

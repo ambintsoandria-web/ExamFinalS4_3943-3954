@@ -19,7 +19,7 @@
                 <label for="situation-date">
                     <i class="bi bi-calendar3"></i> Date de la situation :
                 </label>
-                <input type="date" id="situation-date" name="situation-date" value="<?= date('Y-m-d') ?>"
+                <input type="date" id="situation-date" name="situation-date" value="<?= esc($date ?? date('Y-m-d')) ?>"
                     onchange="updateSituation()" class="situation-date-input">
                 <button onclick="updateSituation()" class="btn-filter">
                     <i class="bi bi-search"></i> Filtrer

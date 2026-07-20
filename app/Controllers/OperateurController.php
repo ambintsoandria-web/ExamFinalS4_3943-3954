@@ -2,6 +2,8 @@
 namespace App\Controllers;
 use App\Models\OperateurModel;
 use App\Models\PrefixeModel;
+use App\Models\TransactionModel;
+use App\Models\ClientModel;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -77,6 +79,9 @@ class OperateurController extends BaseController
         }
         return view('Operateur/dashboard', [
             'operateur' => $operateur,
+            'stats' => (new TransactionModel())->getStatsGlobales(),
+            'activite' => array_reverse((new TransactionModel())->getActiviteRecente()),
+            'nombreClients' => (new ClientModel())->getNombreClientsActifs(),
             'title' => 'Tableau de bord opérateur',
             'active' => 'dashboard',
         ]);
