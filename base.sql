@@ -62,6 +62,14 @@ CREATE TABLE prefixes (
     FOREIGN KEY (id_operateur) REFERENCES operateurs(id)
 );
 
+
+CREATE TABLE commisions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_operateur INTEGER NOT NULL,
+    pct_commission DECIMAL(10,2),
+    FOREIGN KEY (id_operateur) REFERENCES operateurs(id)
+);
+
 CREATE INDEX idx_transactions_client ON transactions(client_id);
 
 CREATE INDEX idx_clients_telephone ON clients(telephone);

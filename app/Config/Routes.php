@@ -30,6 +30,12 @@ $routes->post('operateur/prefixes/add', 'OperateurController::addPrefixe', ['fil
 $routes->get('operateur/prefixes/delete/(:num)', 'OperateurController::deletePrefixe/$1', ['filter' => 'operateurAuth']);
 $routes->get('operateur/frais', 'FraisController::index', ['filter' => 'operateurAuth']);
 $routes->get('operateur/frais/create/(:num)', 'FraisController::create/$1', ['filter' => 'operateurAuth']);
+$routes->get('operateur/comissions', 'OperateurController::goToComissions', ['filter' => 'operateurAuth']);
+$routes->post('operateur/commissions/add', 'OperateurController::addComission', ['filter' => 'operateurAuth']);
+$routes->post('operateur/commissions/delete/(:num)', 'OperateurController::deleteComission/$1', ['filter' => 'operateurAuth']);
+
+
+
 
 $routes->post('frais/add', 'FraisController::add', ['filter' => 'operateurAuth']);
 $routes->get('frais/edit/(:num)', 'FraisController::edit/$1', ['filter' => 'operateurAuth']);

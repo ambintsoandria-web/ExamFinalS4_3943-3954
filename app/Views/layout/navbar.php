@@ -144,6 +144,12 @@
                         Gains
                     </a>
                 </li>
+                <li>
+                    <a href="<?= site_url('operateur/comissions') ?>" class="<?= ($active ?? '') == 'commissions' ? 'active' : '' ?>">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        Commissions
+                    </a>
+                </li>
             <?php endif; ?>
         </ul>
 

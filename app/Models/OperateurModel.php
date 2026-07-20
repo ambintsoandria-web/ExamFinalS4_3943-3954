@@ -41,4 +41,9 @@ class OperateurModel extends Model
 
         return $valid ? $user : false;
     }
+
+    public function getAutresOperateurs($operateurId)
+    {
+        return $this->where('id !=', $operateurId)->where('actif', 1)->findAll();
+    }
 }
