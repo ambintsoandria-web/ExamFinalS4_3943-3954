@@ -14,7 +14,9 @@ class TransactionModel extends Model
         'type_operation_id',
         'montant',
         'frais',
-        'date_transaction'
+        'date_transaction',
+        'frais_commission',
+        'id_operateur_recepteur'
     ];
     public function getHistoriqueClient($idClient)
     {
@@ -65,6 +67,11 @@ class TransactionModel extends Model
             ->groupBy('DATE(date_transaction)')
             ->orderBy('jour', 'DESC')
             ->findAll(7);
+    }
+    public function getGainsByOperateur($operateur_id, $date){
+        return $this->selectSum("frais_commission")
+                ->where("id_operateur_recepteur", $operateur_id)
+
     }
 
 }

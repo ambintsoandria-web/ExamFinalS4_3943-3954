@@ -47,6 +47,8 @@ CREATE TABLE transactions (
     FOREIGN KEY (client_id) REFERENCES clients(id),
     FOREIGN KEY (type_operation_id) REFERENCES types_operations(id)
 );
+alter table transactions add column frais_commission  real default 0;
+alter table transactions add column id_operateur_recepteur integer defaul null;
 CREATE TABLE transferts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     transaction_id INTEGER NOT NULL,
@@ -61,6 +63,7 @@ CREATE TABLE prefixes (
     id_operateur INTEGER NOT NULL,
     FOREIGN KEY (id_operateur) REFERENCES operateurs(id)
 );
+alter table prefixes add column id_operateur integer not null;
 
 CREATE INDEX idx_transactions_client ON transactions(client_id);
 
