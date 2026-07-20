@@ -71,7 +71,8 @@ class TransactionModel extends Model
     public function getGainsByOperateur($operateur_id, $date){
         return $this->selectSum("frais_commission")
                 ->where("id_operateur_recepteur", $operateur_id)
-
+                ->where("date_transaction <", $date)
+                ->first();
     }
 
 }

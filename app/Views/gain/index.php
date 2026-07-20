@@ -25,6 +25,23 @@
                     </span>
                 </div>
             </div>
+            <div>
+                <h1>Répartition des gains pour les autres operateurs avec un total de <?= number_format($totalGains['frais'] ?? 0, 0, ',', ' ') ?> Ar</h1>
+                <?php if (!empty($gainsByOperateur)): ?>
+                    <ul class="gains-list">
+                        <?php foreach ($gainsByOperateur as $operateurNom => $totalGain): ?>
+                            <li class="gains-list-item">
+                                <span class="gains-list-label">
+                                    <i class="bi bi-person-circle"></i> <?= esc(ucfirst($operateurNom)) ?>
+                                </span>
+                                <span class="gains-list-value">
+                                    <?= number_format($totalGain['frais_commission'] ?? 0, 0, ',', ' ') ?> Ar
+                                </span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
 
             <!-- Gains par type -->
             <div class="gains-section">
