@@ -19,7 +19,8 @@ class OperateurController extends BaseController
     }
     public function goToPrefixe()
     {
-        $data['listePrefixe'] = $this->prefixeModel->findAll();
+        $data['operateurs'] = $this->operateurModel->findAll();
+        $data['listePrefixe'] = $this->prefixeModel->getAvecOperateur();
         $data['title'] = 'Gestion des préfixes';
         $data['active'] = 'prefixes';
         return view('Operateur/prefixe', $data);
@@ -28,6 +29,7 @@ class OperateurController extends BaseController
     public function addPrefixe()
     {
         $prefix = trim((string) $this->request->getPost('prefix'));
+        $operateurId = $this->request->getPost('operateur_id');
         if (!preg_match('/^0[0-9]{2}$/', $prefix)) {
             return redirect()->back()->withInput()->with('erreur', 'Le préfixe doit contenir 3 chiffres et commencer par 0.');
         }
@@ -37,8 +39,17 @@ class OperateurController extends BaseController
             return redirect()->back()->withInput()->with('erreur', 'Ce préfixe existe déjà.');
         }
 
-        $prefixeModel->insert(['prefix' => $prefix]);
+        $prefixeModel->insert([
+            'prefix' => $prefix,
+            'id_operateur' => $operateurId,
+        ]);
         return redirect()->to(site_url('operateur/prefixes'))->with('succes', 'Le préfixe ' . $prefix . ' a été ajouté.');
+    }
+
+    public function deletePrefixe($id)
+    {
+        $this->prefixeModel->delete($id);
+        return redirect()->to(site_url('operateur/prefixes'))->with('succes', 'Préfixe supprimé avec succès.');
     }
     public function login()
     {

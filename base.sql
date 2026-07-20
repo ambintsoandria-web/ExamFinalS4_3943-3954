@@ -71,11 +71,14 @@ CREATE INDEX idx_operateurs_telephone ON operateurs(telephone);
 SELECT * FROM transactions JOIN types_operations ON transactions.type_operation_id = types_operations.id WHERE transactions.client_id = 1;
 
 
+-- =============================================
+-- DONNÉES INITIALES (sans email)
+-- =============================================
 
 -- 1. OPERATEURS
-INSERT INTO operateurs (email, telephone, nom, mot_de_passe) VALUES 
-('admin@mobilemoney.com', '0330000001', 'Admin Principal', 'admin123'),
-('operateur1@mobilemoney.com', '0340000001', 'Opérateur Jean', 'op123');
+INSERT INTO operateurs (telephone, nom, mot_de_passe) VALUES 
+('0330000001', 'Admin Principal', 'admin123'),
+('0340000001', 'Opérateur Jean', 'op123');
 
 -- 2. CLIENTS
 INSERT INTO clients (telephone, nom, solde) VALUES 
@@ -126,7 +129,7 @@ FROM (
     SELECT 250001, 500000, 3000
 );
 
--- 7. TRANSACTIONS (exemples)
+-- 7. TRANSACTIONS
 INSERT INTO transactions (client_id, type_operation_id, montant, frais) VALUES 
 (1, (SELECT id FROM types_operations WHERE nom = 'depot'), 100000, 0),
 (1, (SELECT id FROM types_operations WHERE nom = 'retrait'), 20000, 200),
@@ -138,7 +141,7 @@ INSERT INTO transactions (client_id, type_operation_id, montant, frais) VALUES
 INSERT INTO transferts (transaction_id, client_destinataire_id) VALUES 
 (3, 2);
 
--- 9. HISTORIQUE SOLDE CLIENTS
+-- 9. HISTORIQUE SOLDE
 INSERT INTO client_solde_historique (client_id, solde_precedent) VALUES 
 (1, 0),
 (1, 100000),
@@ -147,3 +150,7 @@ INSERT INTO client_solde_historique (client_id, solde_precedent) VALUES
 (2, 0),
 (2, 50000),
 (2, 40000);
+
+
+INSERT INTO operateurs (telephone, nom, mot_de_passe) VALUES 
+('0330000002', 'Orange', 'orange');

@@ -29,5 +29,11 @@ class PrefixeModel extends Model
 
         return false;
     }
-}
 
+    public function getAvecOperateur()
+    {
+        return $this->select('prefixes.*, operateurs.nom as operateur_nom')
+            ->join('operateurs', 'operateurs.id = prefixes.id_operateur')
+            ->findAll();
+    }
+}
