@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\PrefixeModel;
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -24,6 +26,9 @@ class ClientController extends BaseController
     public TransactionModel $transactionModel;
     public ClientSoldeHistorique $clientSoldeHistorique;
 
+    public PrefixeModel $prefixeModel;
+
+
 
     public function __construct()
     {
@@ -33,6 +38,7 @@ class ClientController extends BaseController
         $this->transfertModel = new TransfertModel();
         $this->transactionModel = new TransactionModel();
         $this->clientSoldeHistorique = new ClientSoldeHistorique();
+        $this->prefixeModel = new PrefixeModel();
     }
     public function goToHistorique()
     {
@@ -100,7 +106,7 @@ class ClientController extends BaseController
     public function addTransfert()
     {
         $telephones = array_values(array_filter((array) $this->request->getPost('telephone')));
-        
+
         $montant = $this->request->getPost('montant');
         $ajouterFraisRetrait = $this->request->getPost('ajouterfraisretrait') === '1';
         $clientId = session('auth_id');
@@ -114,11 +120,32 @@ class ClientController extends BaseController
             'date_modification' => date('Y-m-d H:i:s'),
         ]);
         $montantParDestinataire = $montant / count($telephones);
-        foreach ($telephones as $telephone) {
-            if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait)) {
-                return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
+        $bool = true;
+        $operateurReference = null;
+        if (count($telephones) > 1) {
+            foreach ($telephones as $tel) {
+                $operateurRecepteur = $this->prefixeModel->getOperateurParNumero($tel);
+                if ($operateurReference === null) {
+                    $operateurReference = $operateurRecepteur;
+                } elseif ($operateurRecepteur !== $operateurReference) {
+                    $bool = false;
+                    break;
+                }
             }
         }
+        if (!$bool) {
+            return redirect()->back()->withInput()
+                ->with('erreur', 'Tous les destinataires doivent appartenir au même opérateur.');
+        }
+        if ($bool) {
+            foreach ($telephones as $telephone) {
+                if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait)) {
+
+                    return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
+                }
+            }
+        }
+
         return redirect()->to(site_url('client/espace'))->with('succes', 'Transfert enregistré avec succès.');
     }
 

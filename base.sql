@@ -169,7 +169,6 @@ INSERT INTO operateurs (telephone, nom, mot_de_passe) VALUES
 
 
 
-
 -- 2. CLIENTS
 INSERT INTO clients (telephone, nom, solde) VALUES 
 ('0391234567', 'Rakoto Jean', 150000);

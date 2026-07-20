@@ -63,3 +63,21 @@
             ..(ok) getsoldetotalbyclient
         .(ok) Controller:
             ..(ok) operation/client
+
+
+Version 2
+Coté opérateur
+Configuration des préfixes valable pour les autres opérateurs (ex: 032 et 031, …)
+Configuration % en plus de commissions pour les transferts vers les autres opérateurs 
+Sur la page “Situation gain via les différents frais” , séparer opérateur et autres opérateurs
+Situation des montants à envoyer à chaque opérateur
+
+Coté client
+Option inclure frais de retrait lors de l’envoi
+il n’y a pas de frais de retrait pour les autres opérateurs
+Envoi multiple vers plusieurs numéros ( divisé le montant pour chaque numéro)
+même opérateur uniquement
+
+
+Livraison à 17h10 ( mettre Tag v2)
+

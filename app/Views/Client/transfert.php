@@ -15,10 +15,18 @@
             <label for="telephone">Téléphone du(es) destinataire(s)</label>
             <button type="button" class="add-recipient-button"><i class="bi bi-plus"></i> Ajouter un autre destinataire</button>
             <div id="recipients-container">
+                <?php
+                $anciensTelephones = (array) old('telephone');
+                if (empty($anciensTelephones)) {
+                    $anciensTelephones = [''];
+                }
+                ?>
+                <?php foreach ($anciensTelephones as $index => $ancienTelephone): ?>
                 <div class="recipient-input">
-                    <input type="text" name="telephone[]" id="telephone" value="<?= esc(old('telephone')) ?>" placeholder="0340000000" required>
+                    <input type="text" name="telephone[]" <?= $index === 0 ? 'id="telephone"' : '' ?> value="<?= esc($ancienTelephone) ?>" placeholder="0340000000" required>
                     <button type="button" class="remove-recipient-button"><i class="bi bi-x"></i></button>
                 </div>
+                <?php endforeach; ?>
             </div>
             <label for="montant" class="spaced-label">Montant</label>
             <div class="amount-input"><input type="number" name="montant" id="montant"
