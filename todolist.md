@@ -45,7 +45,7 @@
         . (ok) Faire un retrait 
         . (ok) Faire un transfert 
         . (ok) Voir historique
-# page de gain et client (Alan)
+# page de gain et situation client client (Alan)
     ## page de gain
         .(ok) Front:
             ..(ok) gains totaux
