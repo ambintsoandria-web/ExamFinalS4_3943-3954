@@ -178,14 +178,38 @@ class ClientController extends BaseController
     public function getSituationClients()
     {
         $clients = $this->clientModel->findAll();
-        // recuperer la date si il y a sur l'url
         $date = $this->request->getGet('date');
+
         if (!$date) {
-            $date = date('Y-m-d H:i:s');
+            $date = date('Y-m-d');
         }
+
+        $date = $this->normalizeDateForDisplay($date);
+
         foreach ($clients as &$client) {
             $client['solde'] = $this->clientSoldeHistorique->getSoldebyClient($client['id'], $date);
         }
-        return view('Client/situation', ['clients' => $clients]);
+
+        return view('Client/situation', [
+            'clients' => $clients,
+            'date' => $date,
+        ]);
+    }
+
+    private function normalizeDateForDisplay(?string $date): string
+    {
+        $date = trim((string) ($date ?? ''));
+
+        if ($date === '') {
+            return date('Y-m-d');
+        }
+
+        if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
+            return $date;
+        }
+
+        $dateTime = new \DateTime($date);
+
+        return $dateTime->format('Y-m-d');
     }
 }
