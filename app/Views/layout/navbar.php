@@ -150,6 +150,7 @@
                         Commissions
                     </a>
                 </li>
+                <li><a href="<?= site_url('operateur/situationOperateur') ?>" class="<?= ($active ?? '') == 'situation-operateurs' ? 'active' : '' ?>"><i class="bi bi-send-check"></i>Situation opérateurs</a></li>
             <?php endif; ?>
         </ul>
 

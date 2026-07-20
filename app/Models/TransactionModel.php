@@ -24,7 +24,6 @@ class TransactionModel extends Model
             ->where('transactions.client_id', $idClient)->findAll();
     }
 
-
     public function getSommeTotalGains($date)
     {
         return $this->selectSum('frais')
@@ -71,7 +70,7 @@ class TransactionModel extends Model
             ->orderBy('jour', 'DESC')
             ->findAll(7);
     }
-    public function getGainsByOperateur($operateur_id, $date)
+    public function getGainsByOperateur($operateur_id)
     {
         return $this->selectSum("frais_commission")
             ->where("id_operateur_recepteur", $operateur_id);
@@ -96,9 +95,6 @@ class TransactionModel extends Model
             ->where('date_transaction <', $date)
             ->first();
         return (float) ($result['frais_commission'] ?? 0);
-                ->where("id_operateur_recepteur", $operateur_id)
-                ->where("date_transaction <", $date)
-                ->first();
     }
 
 }

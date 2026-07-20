@@ -33,6 +33,8 @@ $routes->get('operateur/frais/create/(:num)', 'FraisController::create/$1', ['fi
 $routes->get('operateur/comissions', 'OperateurController::goToComissions', ['filter' => 'operateurAuth']);
 $routes->post('operateur/commissions/add', 'OperateurController::addComission', ['filter' => 'operateurAuth']);
 $routes->post('operateur/commissions/delete/(:num)', 'OperateurController::deleteComission/$1', ['filter' => 'operateurAuth']);
+$routes->get('operateur/situationOperateur', 'OperateurController::goToSituationOperateur', ['filter' => 'operateurAuth']);
+
 
 
 

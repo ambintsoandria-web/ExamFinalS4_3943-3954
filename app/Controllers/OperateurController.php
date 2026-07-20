@@ -21,6 +21,20 @@ class OperateurController extends BaseController
         $this->prefixeModel = new PrefixeModel();
         $this->commissionModel = new ComissionsModel();
     }
+    public function goToSituationOperateur()
+    {
+        $idOperateur = (int) session('auth_id');
+        $listeOperateurs = $this->operateurModel->getAutresOperateurs($idOperateur);
+        foreach ($listeOperateurs as &$operateur) {
+            $operateur['situation'] = $this->operateurModel->getGainsByOperateur($operateur['id']);
+        }
+        $data = [
+            'listeOperateurs' => $listeOperateurs,
+            'title' => 'Situation des autres opérateurs',
+            'active' => 'situation-operateurs',
+        ];
+        return view('Operateur/situationOperateur', $data);
+    }
     public function deleteComission($idComission)
     {
         $this->commissionModel->delete($idComission);
