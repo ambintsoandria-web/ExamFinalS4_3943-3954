@@ -70,10 +70,12 @@ class TransactionModel extends Model
             ->orderBy('jour', 'DESC')
             ->findAll(7);
     }
-    public function getGainsByOperateur($operateur_id)
+    public function getGainsByOperateur($operateur_id, $date)
     {
         return $this->selectSum("frais_commission")
-            ->where("id_operateur_recepteur", $operateur_id);
+            ->where("id_operateur_recepteur", $operateur_id)
+            ->where('date_transaction <', $date)
+            ->first();
     }
 
     public function getSituationOperateurs($operateurConnecte, $date)
