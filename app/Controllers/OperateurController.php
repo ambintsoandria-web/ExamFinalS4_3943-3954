@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+use App\Models\ComissionsModel;
 use App\Models\OperateurModel;
 use App\Models\PrefixeModel;
 use App\Models\TransactionModel;
@@ -12,10 +13,54 @@ class OperateurController extends BaseController
 {
     private OperateurModel $operateurModel;
     protected PrefixeModel $prefixeModel;
+    protected ComissionsModel $commissionModel;
+
     public function __construct()
     {
         $this->operateurModel = new OperateurModel();
         $this->prefixeModel = new PrefixeModel();
+        $this->commissionModel = new ComissionsModel();
+    }
+    public function deleteComission($idComission)
+    {
+        $this->commissionModel->delete($idComission);
+        return redirect()->to(site_url('operateur/comissions'))
+            ->with('succes', 'Commission supprimée avec succès.');
+    }
+    public function addComission()
+    {
+        $id_operateur = $this->request->getPost('id_operateur');
+        $pct_commission = $this->request->getPost('pct_commission');
+
+        if ((int) $id_operateur === (int) session('auth_id')) {
+            return redirect()->to(site_url('operateur/comissions'))
+                ->with('erreur', 'Vous ne pouvez pas définir votre propre commission.');
+        }
+
+        $existing = $this->commissionModel->existePourOperateur($id_operateur);
+        if ($existing) {
+            return redirect()->to(site_url('operateur/comissions'))
+                ->with('erreur', 'Cet opérateur a déjà une commission.');
+        }
+
+        $data = [
+            'id_operateur' => $id_operateur,
+            'pct_commission' => $pct_commission
+        ];
+
+        $this->commissionModel->save($data);
+
+        return redirect()->to(site_url('operateur/comissions'))
+            ->with('succes', 'Commission ajoutée avec succès.');
+    }
+    public function goToComissions()
+    {
+        $data['operateurs'] = $this->operateurModel->getAutresOperateurs(session('auth_id'));
+        $data['commissions'] = $this->commissionModel->getAvecOperateur();
+        $data['title'] = 'Gestion des commissions';
+        $data['active'] = 'commissions';
+
+        return view('Operateur/comissions', $data);
     }
     public function goToPrefixe()
     {

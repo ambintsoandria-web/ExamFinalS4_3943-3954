@@ -3023,3 +3023,498 @@ in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
 13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 15 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 11:59:19 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 43.
+ 1 APPPATH/Views/Operateur/comissions.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(22): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 11:59:20 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 43.
+ 1 APPPATH/Views/Operateur/comissions.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(22): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 11:59:28 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 43.
+ 1 APPPATH/Views/Operateur/comissions.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(22): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:01 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:02 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:02 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:02 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:02 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:03 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:03 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:03 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(23): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:43 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:03:44 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:04:27 --> ErrorException: Undefined variable $operateurs
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 38.
+ 1 APPPATH/Views/Operateur/comissions.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(27): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:07:54 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:07:55 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:07:56 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:08:03 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:08:39 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:08:47 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:10:17 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:10:22 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:10:23 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:10:31 --> ErrorException: Undefined array key "operateur_nom"
+[Method: GET, Route: operateur/comissions]
+in APPPATH/Views/Operateur/comissions.php on line 83.
+ 1 APPPATH/Views/Operateur/comissions.php(83): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/app/Views/Operateur/comissions.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToComissions()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')

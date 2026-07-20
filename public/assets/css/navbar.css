@@ -407,6 +407,9 @@
     color: var(--muted);
 }
 
+.action-form { display: inline-flex; margin: 0; }
+.action-form .btn-delete { border: 0; cursor: pointer; }
+
 .client-charts { grid-template-columns: repeat(2, minmax(300px, 1fr)); }
 @media (max-width: 800px) { .client-charts { grid-template-columns: 1fr; } }
 
