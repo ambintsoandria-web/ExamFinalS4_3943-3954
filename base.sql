@@ -49,6 +49,7 @@ CREATE TABLE transactions (
 );
 alter table transactions add column frais_commission  real default 0;
 alter table transactions add column id_operateur_recepteur integer defaul null;
+
 CREATE TABLE transferts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     transaction_id INTEGER NOT NULL,
@@ -105,8 +106,8 @@ INSERT INTO types_operations (nom) VALUES
 ('transfert');
 
 -- 4. PREFIXES
-INSERT INTO prefixes (prefix) VALUES 
-('033'), ('034'), ('037'), ('038'), ('039');
+INSERT INTO prefixes (prefix,id_operateur) VALUES 
+('033',1), ('034',1), ('037',1), ('038',2), ('039',2);
 
 -- 5. BAREMES FRAIS (retrait)
 INSERT INTO frais (type_operation_id, montant_min, montant_max, montant_frais)
@@ -165,3 +166,10 @@ INSERT INTO client_solde_historique (client_id, solde_precedent) VALUES
 
 INSERT INTO operateurs (telephone, nom, mot_de_passe) VALUES 
 ('0330000002', 'Orange', 'orange');
+
+
+
+
+-- 2. CLIENTS
+INSERT INTO clients (telephone, nom, solde) VALUES 
+('0391234567', 'Rakoto Jean', 150000);

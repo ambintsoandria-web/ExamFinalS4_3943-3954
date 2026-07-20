@@ -25,19 +25,22 @@ class TransactionModel extends Model
     }
 
 
-    public function getSommeTotalGains($date){
+    public function getSommeTotalGains($date)
+    {
         return $this->selectSum('frais')
             ->where('date_transaction <', $date)
             ->first();
     }
-    public function getSommeTotalGainsByTypeOperation($typeOperationId, $date){
-        $result =  $this->selectSum('frais')
+    public function getSommeTotalGainsByTypeOperation($typeOperationId, $date)
+    {
+        $result = $this->selectSum('frais')
             ->where('type_operation_id', $typeOperationId)
             ->where('date_transaction <', $date)
             ->first();
         return $result['frais'] ?? 0;
     }
-    public function getSoldeTotalByClient($clientId, $date){
+    public function getSoldeTotalByClient($clientId, $date)
+    {
         return $this->selectSum('montant + frais as solde_total')
             ->where('client_id', $clientId)
             ->where('date_transaction <', $date)
@@ -68,10 +71,31 @@ class TransactionModel extends Model
             ->orderBy('jour', 'DESC')
             ->findAll(7);
     }
-    public function getGainsByOperateur($operateur_id, $date){
+    public function getGainsByOperateur($operateur_id, $date)
+    {
         return $this->selectSum("frais_commission")
-                ->where("id_operateur_recepteur", $operateur_id)
+            ->where("id_operateur_recepteur", $operateur_id);
+    }
 
+    public function getSituationOperateurs($operateurConnecte, $date)
+    {
+        return $this->select('operateurs.nom as operateur_nom, SUM(transactions.frais_commission) as commissions, SUM(transactions.montant + transactions.frais_commission) as montant_a_envoyer, COUNT(transactions.id) as total_transferts')
+            ->join('operateurs', 'operateurs.id = transactions.id_operateur_recepteur')
+            ->where('transactions.type_operation_id', 3)
+            ->where('transactions.id_operateur_recepteur !=', $operateurConnecte)
+            ->where('transactions.date_transaction <', $date)
+            ->groupBy('operateurs.id')
+            ->findAll();
+    }
+
+    public function getTotalCommissionsExternes($operateurConnecte, $date)
+    {
+        $result = $this->selectSum('frais_commission')
+            ->where('type_operation_id', 3)
+            ->where('id_operateur_recepteur !=', $operateurConnecte)
+            ->where('date_transaction <', $date)
+            ->first();
+        return (float) ($result['frais_commission'] ?? 0);
     }
 
 }

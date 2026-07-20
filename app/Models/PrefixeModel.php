@@ -36,4 +36,14 @@ class PrefixeModel extends Model
             ->join('operateurs', 'operateurs.id = prefixes.id_operateur')
             ->findAll();
     }
+
+    public function getOperateurParNumero($numero)
+    {
+        foreach ($this->findAll() as $prefixe) {
+            if (strpos($numero, $prefixe['prefix']) === 0) {
+                return (int) $prefixe['id_operateur'];
+            }
+        }
+        return null;
+    }
 }

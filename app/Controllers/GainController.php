@@ -33,7 +33,11 @@ namespace App\Controllers;
 
             return view('gain/index', [
                 'totalGains' => $totalGains,
-                'gainsByTypeOperation' => $gainsByTypeOperation
+                'gainsByTypeOperation' => $gainsByTypeOperation,
+                'commissionsExternes' => $this->transactionModel->getTotalCommissionsExternes(session('auth_id'), $date),
+                'situationOperateurs' => $this->transactionModel->getSituationOperateurs(session('auth_id'), $date),
+                'title' => 'Situation des gains',
+                'active' => 'gains',
             ]);
         }
     }
