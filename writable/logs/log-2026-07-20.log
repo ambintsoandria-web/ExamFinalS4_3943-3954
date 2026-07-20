@@ -4863,3 +4863,23 @@ in APPPATH/Controllers/GainController.php on line 40.
  5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
  7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 13:12:08 --> Error: Cannot use object of type App\Models\TransactionModel as array
+[Method: GET, Route: operateur/gains]
+in APPPATH/Controllers/GainController.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\GainController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 13:13:01 --> Error: Cannot use object of type App\Models\TransactionModel as array
+[Method: GET, Route: operateur/gains]
+in APPPATH/Controllers/GainController.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\GainController->index()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
