@@ -14,7 +14,7 @@ class TransfertModel extends Model
         'client_destinataire_id'
     ];
 
-    public function effectuer($clientId, $telephoneDestinataire, $montant)
+    public function effectuer($clientId, $telephoneDestinataire, $montant, $ajouterFraisRetrait = false)
     {
         $clientModel = new ClientModel();
         $destinataire = $clientModel->where('telephone', $telephoneDestinataire)->first();
@@ -37,11 +37,18 @@ class TransfertModel extends Model
             $fraisCommission = round($montant * $pourcentage / 100, 2);
         }
 
+        $fraisRetrait = 0;
+        if($ajouterFraisRetrait) {
+            $fraisRetrait = (new FraisModel())->getFraisRetrait($montant);
+        }
+
+        $montantTotal = $montant + $frais + $fraisCommission + $fraisRetrait;
+
         $transactionModel = new TransactionModel();
         $transactionModel->insert([
             'client_id' => $clientId,
             'type_operation_id' => 3,
-            'montant' => $montant,
+            'montant' => $montant + $fraisRetrait,
             'frais' => $frais,
             'frais_commission' => $fraisCommission,
             'id_operateur_recepteur' => $operateurRecepteur,
@@ -52,7 +59,7 @@ class TransfertModel extends Model
             'transaction_id' => $transactionModel->getInsertID(),
             'client_destinataire_id' => $destinataire['id'],
         ]);
-        $clientModel->update($clientId, ['solde' => $expediteur['solde'] - ($montant + $frais + $fraisCommission)]);
+        $clientModel->update($clientId, ['solde' => $expediteur['solde'] - $montantTotal]);
         $clientModel->update($destinataire['id'], ['solde' => $destinataire['solde'] + $montant]);
         return true;
     }

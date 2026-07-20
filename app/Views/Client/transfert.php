@@ -23,37 +23,43 @@
             <label for="montant" class="spaced-label">Montant</label>
             <div class="amount-input"><input type="number" name="montant" id="montant"
                     value="<?= esc(old('montant')) ?>" placeholder="10 000" required><span>Ar</span></div>
+            <label class="checkbox-line">
+                <input type="checkbox" name="ajouterfraisretrait" value="1" <?= old('ajouterfraisretrait') ? 'checked' : '' ?>>
+                Ajouter les frais de retrait
+            </label>
             <button type="submit" class="deposit-button">Envoyer <i class="bi bi-arrow-right"></i></button>
         </form>
     </section>
 </div>
 <?= $this->endSection() ?>
+<?= $this->section('scripts') ?>
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const addRecipientButton = document.querySelector('.add-recipient-button');
-            const recipientsContainer = document.getElementById('recipients-container');
+document.addEventListener('DOMContentLoaded', function () {
+    const addRecipientButton = document.querySelector('.add-recipient-button');
+    const recipientsContainer = document.getElementById('recipients-container');
 
-            addRecipientButton.addEventListener('click', function () {
-                const recipientInput = document.createElement('div');
-                recipientInput.classList.add('recipient-input');
-                recipientInput.innerHTML = `
-                    <input type="text" name="telephone[]" placeholder="0340000000" required>
-                    <button type="button" class="remove-recipient-button"><i class="bi bi-x"></i></button>
-                `;
-                recipientsContainer.appendChild(recipientInput);
+    addRecipientButton.addEventListener('click', function () {
+        const recipientInput = document.createElement('div');
+        recipientInput.classList.add('recipient-input');
+        recipientInput.innerHTML = `
+            <input type="text" name="telephone[]" placeholder="0340000000" required>
+            <button type="button" class="remove-recipient-button"><i class="bi bi-x"></i></button>
+        `;
+        recipientsContainer.appendChild(recipientInput);
+    });
 
-                const removeButton = recipientInput.querySelector('.remove-recipient-button');
-                removeButton.addEventListener('click', function () {
-                    recipientsContainer.removeChild(recipientInput);
-                });
-            });
+    recipientsContainer.addEventListener('click', function (event) {
+        const removeButton = event.target.closest('.remove-recipient-button');
+        if (!removeButton) {
+            return;
+        }
 
-            const existingRemoveButtons = document.querySelectorAll('.remove-recipient-button');
-            existingRemoveButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const recipientInput = button.parentElement;
-                    recipientsContainer.removeChild(recipientInput);
-                });
-            });
-        });    
+        if (recipientsContainer.children.length === 1) {
+            return;
+        }
+
+        removeButton.parentElement.remove();
+    });
+});
 </script>
+<?= $this->endSection() ?>
