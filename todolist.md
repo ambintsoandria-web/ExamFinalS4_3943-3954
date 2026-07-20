@@ -45,3 +45,21 @@
         . (ok) Faire un retrait 
         . (ok) Faire un transfert 
         . (ok) Voir historique
+# page de gain et client (Alan)
+    ## page de gain
+        .(ok) Front:
+            ..(ok) gains totaux
+            ..(ok) gains par type d'operations
+        .(ok) Services:
+            ..(ok) getsommetotalgain
+            ..(ok) getsommebytypeoperation
+        .(ok) Controller:
+            ..(ok) operation/gain
+    ## page de client
+        .(ok) Front:
+            ..(ok) filtrer par date
+            ..(ok) clients avec solde
+        .(ok) Services:
+            ..(ok) getsoldetotalbyclient
+        .(ok) Controller:
+            ..(ok) operation/client
