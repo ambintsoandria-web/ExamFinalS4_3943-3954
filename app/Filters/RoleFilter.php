@@ -13,8 +13,7 @@ class RoleFilter implements FilterInterface
         // $arguments contient le(s) rôle(s) autorisé(s)
 // ex: ['admin'] ou ['admin', 'bibliothecaire']
         if (!$user || !in_array($user['role'], $arguments ?? [])) {
-            return redirect()->to('/')->with('erreur', 'Accès refusé :
-droits insuffisants');
+            return redirect()->to('/')->with('erreur', 'Accès refusé : droits insuffisants');
         }
     }
     public function after(
