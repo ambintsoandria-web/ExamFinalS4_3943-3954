@@ -406,6 +406,7 @@
 .text-muted {
     color: var(--muted);
 }
+.gain-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:22px}.gain-summary{padding:26px;border-radius:20px;color:#fff;box-shadow:0 16px 36px rgba(5,44,33,.13)}.gain-own{background:linear-gradient(140deg,#08271e,#087552)}.gain-external{background:linear-gradient(140deg,#18242b,#24606b)}.gain-summary>span{font-size:12px;color:rgba(255,255,255,.72)}.gain-summary strong{display:block;font:800 34px Manrope,sans-serif;margin:12px 0 7px}.gain-summary strong small,.gain-summary p{font-size:11px;color:rgba(255,255,255,.65)}.gain-content-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.data-card-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line)}.data-card-head span{color:var(--green-dark);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px}.data-card-head h2{font:700 17px Manrope,sans-serif;margin-top:3px}.data-card-head>i{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#e8faf3;color:var(--green-dark)}.commission-cell{color:#157b91;font-weight:700}.empty-inline{text-align:center;padding:30px;color:var(--muted)}@media(max-width:900px){.gain-summary-grid,.gain-content-grid{grid-template-columns:1fr}}
 
 .action-form { display: inline-flex; margin: 0; }
 .action-form .btn-delete { border: 0; cursor: pointer; }

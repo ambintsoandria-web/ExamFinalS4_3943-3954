@@ -25,4 +25,10 @@ class ComissionsModel extends Model
     {
         return $this->where('id_operateur', $operateurId)->first();
     }
+
+    public function getPourcentage($operateurId)
+    {
+        $commission = $this->where('id_operateur', $operateurId)->first();
+        return (float) ($commission['pct_commission'] ?? 0);
+    }
 }

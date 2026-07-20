@@ -1,5 +1,13 @@
 <?= $this->extend('layout/navbar') ?>
 <?= $this->section('content') ?>
+<div class="page-heading"><div><span class="page-kicker">Pilotage financier</span><h1>Situation des gains</h1><p>Séparez vos frais des commissions dues aux autres opérateurs.</p></div><span class="page-icon"><i class="bi bi-graph-up-arrow"></i></span></div>
+<div class="gain-summary-grid">
+    <article class="gain-summary gain-own"><span><i class="bi bi-wallet2"></i> Nos gains via les frais</span><strong><?= number_format($totalGains['frais'] ?? 0,0,',',' ') ?> <small>Ar</small></strong><p>Frais générés par toutes les opérations</p></article>
+    <article class="gain-summary gain-external"><span><i class="bi bi-building"></i> Commissions autres opérateurs</span><strong><?= number_format($commissionsExternes,0,',',' ') ?> <small>Ar</small></strong><p>Commissions des transferts externes</p></article>
+</div>
+<div class="gain-content-grid">
+<section class="data-card"><div class="data-card-head"><div><span>Opérateur actuel</span><h2>Gains par opération</h2></div><i class="bi bi-pie-chart"></i></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Opération</th><th class="align-right">Frais gagnés</th></tr></thead><tbody><?php foreach($gainsByTypeOperation as $typeNom=>$totalGain): ?><tr><td><span class="operation-type operation-<?= esc($typeNom) ?>"><?= esc(ucfirst($typeNom)) ?></span></td><td class="align-right amount-cell"><?= number_format($totalGain,0,',',' ') ?> Ar</td></tr><?php endforeach; ?></tbody></table></div></section>
+<section class="data-card"><div class="data-card-head"><div><span>Autres opérateurs</span><h2>Montants à envoyer</h2></div><i class="bi bi-send"></i></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Opérateur</th><th class="align-right">Transferts</th><th class="align-right">Commission</th><th class="align-right">À envoyer</th></tr></thead><tbody><?php if($situationOperateurs): foreach($situationOperateurs as $situation): ?><tr><td><b><?= esc($situation['operateur_nom']) ?></b></td><td class="align-right"><?= (int)$situation['total_transferts'] ?></td><td class="align-right commission-cell"><?= number_format($situation['commissions'],0,',',' ') ?> Ar</td><td class="align-right amount-cell"><?= number_format($situation['montant_a_envoyer'],0,',',' ') ?> Ar</td></tr><?php endforeach; else: ?><tr><td colspan="4"><div class="empty-inline">Aucun transfert vers un autre opérateur.</div></td></tr><?php endif; ?></tbody></table></div></section>
 
 <div class="auth-page">
     <link rel="stylesheet" href="<?= base_url('assets/css/gains.css') ?>">
@@ -116,5 +124,4 @@
         </div>
     </div>
 </div>
-
 <?= $this->endSection() ?>
