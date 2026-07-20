@@ -37,3 +37,5 @@ $routes->post('frais/update/(:num)', 'FraisController::update/$1', ['filter' => 
 $routes->get('frais/delete/(:num)', 'FraisController::delete/$1', ['filter' => 'operateurAuth']);
 $routes->get('operateur/gains', 'GainController::index', ['filter' => 'operateurAuth']);
 $routes->get('operateur/clients', 'ClientController::getSituationClients', ['filter' => 'operateurAuth']);
+$routes->get('operateur/client', 'ClientController::getSituationClients', ['filter' => 'operateurAuth']);
+$routes->get('operateur/situation', 'ClientController::getSituationClients', ['filter' => 'operateurAuth']);

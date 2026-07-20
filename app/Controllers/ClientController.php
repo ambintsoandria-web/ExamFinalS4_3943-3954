@@ -165,6 +165,7 @@ class ClientController extends BaseController
         }
         return view('Client/dashboard', [
             'client' => $client,
+            'stats' => $this->transactionModel->getStatsClient($client['id']),
             'title' => 'Mon espace client',
             'active' => 'dashboard',
         ]);
@@ -176,11 +177,12 @@ class ClientController extends BaseController
     }
     public function getSituationClients()
     {
-        $clients = $this->clientModel->findAll();
-        $date = date('Y-m-d H:i:s');
-        foreach ($clients as &$client) {
-            $client['solde'] = $this->clientSoldeHistorique->getSoldebyClient($client['id'], $date);
-        }
-        return view('Client/situation', ['clients' => $clients]);
+        $date = $this->request->getGet('date') ?? date('Y-m-d');
+        return view('Client/situation', [
+            'clients' => $this->clientModel->getSituationClients($date),
+            'date' => $date,
+            'title' => 'Situation des clients',
+            'active' => 'clients',
+        ]);
     }
 }

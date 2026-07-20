@@ -31,4 +31,19 @@ class ClientModel extends Model
 
         return $client;
     }
+
+    public function getSituationClients($date)
+    {
+        $clients = $this->findAll();
+        $historiqueModel = new ClientSoldeHistorique();
+        foreach ($clients as &$client) {
+            $client['solde'] = $historiqueModel->getSoldebyClient($client['id'], $date . ' 23:59:59');
+        }
+        return $clients;
+    }
+
+    public function getNombreClientsActifs()
+    {
+        return $this->where('actif', 1)->countAllResults();
+    }
 }
