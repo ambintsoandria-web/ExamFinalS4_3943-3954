@@ -177,7 +177,11 @@ class ClientController extends BaseController
     public function getSituationClients()
     {
         $clients = $this->clientModel->findAll();
-        $date = date('Y-m-d H:i:s');
+        // recuperer la date si il y a sur l'url
+        $date = $this->request->getGet('date');
+        if (!$date) {
+            $date = date('Y-m-d H:i:s');
+        }
         foreach ($clients as &$client) {
             $client['solde'] = $this->clientSoldeHistorique->getSoldebyClient($client['id'], $date);
         }

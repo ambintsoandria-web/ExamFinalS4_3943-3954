@@ -107,7 +107,7 @@
     function updateSituation() {
         const date = document.getElementById('situation-date').value;
         if (date) {
-            window.location.href = `<?= site_url('operateur/situation') ?>?date=${date}`;
+            window.location.href = `<?= site_url('operateur/clients') ?>?date=${date}`;
         }
     }
 
