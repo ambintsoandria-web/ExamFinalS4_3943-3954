@@ -24,7 +24,7 @@ class ClientSoldeHistorique extends Model
         $effectiveDate = $this->normalizeDate($date);
 
         $historique = $this->where('client_id', $clientId)
-            ->where('date_modification <=', $effectiveDate)
+            ->where('date_modification >=', $effectiveDate)
             ->orderBy('date_modification', 'DESC')
             ->first();
 
