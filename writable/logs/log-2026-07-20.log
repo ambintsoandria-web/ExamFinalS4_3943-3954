@@ -4480,3 +4480,86 @@ in APPPATH/Models/TransactionModel.php on line 75.
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinalS4_3943-3954/public/index.php')
+CRITICAL - 2026-07-20 12:33:14 --> TypeError: Unsupported operand types: int + array
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')
+CRITICAL - 2026-07-20 12:33:58 --> ParseError: syntax error, unexpected token "endif", expecting end of file
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 43.
+ 1 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 2 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 3 APPPATH\Controllers\GainController.php(43): view('gain/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')
+CRITICAL - 2026-07-20 12:34:15 --> TypeError: number_format(): Argument #1 ($num) must be of type int|float, array given
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 38.
+ 1 APPPATH\Views\gain\index.php(38): number_format([...], 0, ',', ' ')
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(43): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')
+CRITICAL - 2026-07-20 12:34:16 --> TypeError: number_format(): Argument #1 ($num) must be of type int|float, array given
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 38.
+ 1 APPPATH\Views\gain\index.php(38): number_format([...], 0, ',', ' ')
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(43): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')
+CRITICAL - 2026-07-20 12:34:17 --> TypeError: number_format(): Argument #1 ($num) must be of type int|float, array given
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 38.
+ 1 APPPATH\Views\gain\index.php(38): number_format([...], 0, ',', ' ')
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(43): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')
+CRITICAL - 2026-07-20 12:34:18 --> TypeError: number_format(): Argument #1 ($num) must be of type int|float, array given
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 38.
+ 1 APPPATH\Views\gain\index.php(38): number_format([...], 0, ',', ' ')
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(43): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinalS4_3943-3954\\public\\index.php')

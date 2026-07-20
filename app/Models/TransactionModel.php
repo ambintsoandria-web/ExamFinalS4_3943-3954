@@ -96,6 +96,9 @@ class TransactionModel extends Model
             ->where('date_transaction <', $date)
             ->first();
         return (float) ($result['frais_commission'] ?? 0);
+                ->where("id_operateur_recepteur", $operateur_id)
+                ->where("date_transaction <", $date)
+                ->first();
     }
 
 }
