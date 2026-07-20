@@ -1,0 +1,233 @@
+.auth-shell-lg {
+    max-width: 900px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 40px;
+}
+
+/* Total gains */
+.gains-total {
+    margin: 24px 0;
+}
+
+.gains-total-card {
+    background: linear-gradient(135deg, #e7faf2, #d4f5e8);
+    border-radius: 16px;
+    padding: 24px 32px;
+    text-align: center;
+    border: 1px solid #bee9d8;
+}
+
+.gains-total-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 4px;
+}
+
+.gains-total-label i {
+    color: var(--green-dark);
+}
+
+.gains-total-value {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--green-dark);
+}
+
+/* Section */
+.gains-section {
+    margin-top: 20px;
+}
+
+.gains-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gains-section-title i {
+    color: var(--green-dark);
+}
+
+/* Tableau */
+.gains-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+}
+
+.gains-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 400px;
+}
+
+.gains-table thead tr {
+    background: #f2f6f4;
+    border-bottom: 2px solid var(--line);
+}
+
+.gains-table thead th {
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.gains-table thead th.text-right {
+    text-align: right;
+}
+
+.gains-table tbody tr {
+    border-bottom: 1px solid var(--line);
+    transition: background .2s;
+}
+
+.gains-table tbody tr:hover {
+    background: #f8faf9;
+}
+
+.gains-table tbody td {
+    padding: 14px 20px;
+    color: var(--ink);
+}
+
+.gains-table tbody td.text-right {
+    text-align: right;
+}
+
+.gains-type {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gains-type i {
+    font-size: 20px;
+}
+
+.gains-percentage {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 2px 10px;
+    background: #f2f6f4;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.gains-amount {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.gains-bar-wrapper {
+    width: 100%;
+    height: 6px;
+    background: #f2f6f4;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gains-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+.empty-state {
+    padding: 40px 20px !important;
+    color: var(--muted);
+}
+
+.empty-state i {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Retour */
+.gains-back {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+.gains-back a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gains-back a:hover {
+    color: var(--ink);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-shell-lg {
+        padding: 20px;
+    }
+
+    .gains-total-value {
+        font-size: 28px;
+    }
+
+    .gains-table tbody td {
+        padding: 12px 14px;
+    }
+
+    .gains-type {
+        font-size: 14px;
+    }
+
+    .gains-percentage {
+        font-size: 11px;
+        padding: 1px 8px;
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gains-total-card {
+        padding: 16px 20px;
+    }
+
+    .gains-total-value {
+        font-size: 24px;
+    }
+
+    .gains-table thead th,
+    .gains-table tbody td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}

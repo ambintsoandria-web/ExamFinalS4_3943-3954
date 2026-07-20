@@ -1,0 +1,240 @@
+ERROR - 2026-06-10 06:09:55 --> UNIQUE constraint failed: utilisateurs.email
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/DemoSeeder.php(13): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DemoSeeder->run()
+ 8 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/CLI/Commands.php(72): CodeIgniter\Commands\Database\Seed->run()
+10 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+11 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+13 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+CRITICAL - 2026-06-10 07:22:45 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:22:52 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 56.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:23:02 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 2 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:24 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getRowArray
+[Method: POST, Route: login]
+in SYSTEMPATH/Model.php on line 763.
+ 1 APPPATH/Models/UserModel.php(17): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Auth.php(56): App\Models\UserModel->loggedIn()
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:25 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getRowArray
+[Method: POST, Route: login]
+in SYSTEMPATH/Model.php on line 763.
+ 1 APPPATH/Models/UserModel.php(17): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Auth.php(56): App\Models\UserModel->loggedIn()
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:43 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getRowArray
+[Method: POST, Route: login]
+in SYSTEMPATH/Model.php on line 763.
+ 1 APPPATH/Models/UserModel.php(17): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Auth.php(56): App\Models\UserModel->loggedIn()
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:44 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getRowArray
+[Method: POST, Route: login]
+in SYSTEMPATH/Model.php on line 763.
+ 1 APPPATH/Models/UserModel.php(17): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Auth.php(56): App\Models\UserModel->loggedIn()
+ 3 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 4 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:47 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:48 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:49 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:24:55 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:25:03 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:25:32 --> ParseError: syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+[Method: POST, Route: login]
+in APPPATH/Models/UserModel.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/Auth.php(55): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:25:33 --> ParseError: syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+[Method: POST, Route: login]
+in APPPATH/Models/UserModel.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/Auth.php(55): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:00 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:01 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:03 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:07 --> ErrorException: Undefined array key "nom"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 60.
+ 1 APPPATH/Controllers/Auth.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:10 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
+CRITICAL - 2026-06-10 07:26:10 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: login]
+in APPPATH/Controllers/Auth.php on line 59.
+ 1 APPPATH/Controllers/Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\Auth->login()
+ 3 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/L2/s4/SI/codeigniter4-framework/public/index.php')
