@@ -34,14 +34,16 @@ namespace App\Controllers;
             foreach ($typeOperations as $typeOperation) {
                 $gainsByTypeOperation[$typeOperation['nom']] = $this->transactionModel->getSommeTotalGainsByTypeOperation($typeOperation['id'], $date);
             }
-            $totalGains = 0;
+            $gainsByOperateur = [];
+            $totalCommissions = 0;
             foreach( $operateurs as $operateur) {
                 $gainsByOperateur[$operateur['nom']] = $this->transactionModel->getGainsByOperateur($operateur['id'], $date);
-                $totalGains += $gainsByOperateur[$operateur['nom']]['frais_commission'] ?? 0;
+                $totalCommissions += (float) ($gainsByOperateur[$operateur['nom']]['frais_commission'] ?? 0);
             }
 
             return view('gain/index', [
                 'totalGains' => $totalGains,
+                'totalCommissions' => $totalCommissions,
                 'gainsByTypeOperation' => $gainsByTypeOperation,
                 'gainsByOperateur' => $gainsByOperateur
             ]);
