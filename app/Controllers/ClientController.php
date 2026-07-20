@@ -88,22 +88,26 @@ class ClientController extends BaseController
             'client_id' => $clientId,
             'type_operation_id' => 2,
             'montant' => $montant,
-            'frais' => $this->fraisModel->getFrais($montant),
+            'frais' => $this->fraisModel->getFraisRetrait($montant),
             'date_transaction' => date('Y-m-d H:i:s'),
         ]);
 
         $this->clientModel->update($clientId, [
-            'solde' => $client['solde'] - ($montant + $this->fraisModel->getFrais($montant)),
+            'solde' => $client['solde'] - ($montant + $this->fraisModel->getFraisRetrait($montant)),
         ]);
         return redirect()->to(site_url('client/espace'))->with('succes', 'Retrait enregistré avec succès.');
     }
     public function addTransfert()
     {
-        $telephones = $this->request->getPost('telephone');
+        $telephones = array_values(array_filter((array) $this->request->getPost('telephone')));
         
         $montant = $this->request->getPost('montant');
+        $ajouterFraisRetrait = $this->request->getPost('ajouterfraisretrait') === '1';
         $clientId = session('auth_id');
         $client = $this->clientModel->find($clientId);
+        if (empty($telephones)) {
+            return redirect()->back()->withInput()->with('erreur', 'Ajoutez au moins un destinataire.');
+        }
         $this->clientSoldeHistorique->insert([
             'client_id' => $client['id'],
             'solde_precedent' => $client['solde'],
@@ -111,7 +115,7 @@ class ClientController extends BaseController
         ]);
         $montantParDestinataire = $montant / count($telephones);
         foreach ($telephones as $telephone) {
-            if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire)) {
+            if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait)) {
                 return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
             }
         }

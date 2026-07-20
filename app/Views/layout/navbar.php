@@ -170,6 +170,8 @@
 
     <?= $this->include('layout/footer') ?>
 
+    <?= $this->renderSection('scripts') ?>
+
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');

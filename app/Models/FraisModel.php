@@ -32,15 +32,35 @@ class FraisModel extends Model
     {
         return $this->find($fraisId);
     }
+    public function getFraisRetrait($montant)
+    {
+        return $this->getFraisByTypeOperationAndMontant('retrait', $montant);
+    }
     public function getFrais($montant)
     {
+        return $this->getFraisByTypeOperationAndMontant('transfert', $montant);
+    }
+
+    private function getFraisByTypeOperationAndMontant(string $typeOperationNom, $montant)
+    {
+        $typeOperation = $this->db->table('types_operations')
+            ->select('id')
+            ->where('nom', $typeOperationNom)
+            ->get()
+            ->getRowArray();
+
+        if (! $typeOperation) {
+            return 0;
+        }
+
         $montantFrais = 0;
-        $listeFrais = $this->findAll();
+        $listeFrais = $this->where('type_operation_id', $typeOperation['id'])->findAll();
         foreach ($listeFrais as $frais) {
             if ($frais['montant_min'] <= $montant && $montant <= $frais['montant_max']) {
                 $montantFrais = $frais['montant_frais'];
             }
         }
+
         return $montantFrais;
     }
 }
