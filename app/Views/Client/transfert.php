@@ -12,9 +12,14 @@
             <div class="prefix-alert prefix-alert-error"><?= esc(session('erreur')) ?></div><?php endif; ?>
         <form action="<?= site_url('client/transfert') ?>" method="post" class="deposit-form">
             <?= csrf_field() ?>
-            <label for="telephone">Téléphone du destinataire</label>
-            <div class="amount-input"><input type="text" name="telephone" id="telephone"
-                    value="<?= esc(old('telephone')) ?>" placeholder="0340000000" required></div>
+            <label for="telephone">Téléphone du(es) destinataire(s)</label>
+            <button type="button" class="add-recipient-button"><i class="bi bi-plus"></i> Ajouter un autre destinataire</button>
+            <div id="recipients-container">
+                <div class="recipient-input">
+                    <input type="text" name="telephone[]" id="telephone" value="<?= esc(old('telephone')) ?>" placeholder="0340000000" required>
+                    <button type="button" class="remove-recipient-button"><i class="bi bi-x"></i></button>
+                </div>
+            </div>
             <label for="montant" class="spaced-label">Montant</label>
             <div class="amount-input"><input type="number" name="montant" id="montant"
                     value="<?= esc(old('montant')) ?>" placeholder="10 000" required><span>Ar</span></div>
@@ -23,3 +28,32 @@
     </section>
 </div>
 <?= $this->endSection() ?>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addRecipientButton = document.querySelector('.add-recipient-button');
+            const recipientsContainer = document.getElementById('recipients-container');
+
+            addRecipientButton.addEventListener('click', function () {
+                const recipientInput = document.createElement('div');
+                recipientInput.classList.add('recipient-input');
+                recipientInput.innerHTML = `
+                    <input type="text" name="telephone[]" placeholder="0340000000" required>
+                    <button type="button" class="remove-recipient-button"><i class="bi bi-x"></i></button>
+                `;
+                recipientsContainer.appendChild(recipientInput);
+
+                const removeButton = recipientInput.querySelector('.remove-recipient-button');
+                removeButton.addEventListener('click', function () {
+                    recipientsContainer.removeChild(recipientInput);
+                });
+            });
+
+            const existingRemoveButtons = document.querySelectorAll('.remove-recipient-button');
+            existingRemoveButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const recipientInput = button.parentElement;
+                    recipientsContainer.removeChild(recipientInput);
+                });
+            });
+        });    
+</script>
