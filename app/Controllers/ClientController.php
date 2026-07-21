@@ -139,6 +139,11 @@ class ClientController extends BaseController
         }
         if ($bool) {
             foreach ($telephones as $telephone) {
+                $operateurRecepteur = $this->prefixeModel->getOperateurParNumero($tel);
+                
+                if($operateurRecepteur !== $operateurReference){
+                    $ajouterFraisRetrait = false;
+                }
                 if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait)) {
 
                     return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
