@@ -49,7 +49,7 @@ class FraisModel extends Model
             ->get()
             ->getRowArray();
 
-        if (! $typeOperation) {
+        if (!$typeOperation) {
             return 0;
         }
 
