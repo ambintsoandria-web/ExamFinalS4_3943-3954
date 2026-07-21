@@ -64,7 +64,7 @@
                     <div class="phone-field">
                         <span class="country-code"><span class="flag">🇲🇬</span> +261 <i></i></span>
                         <input id="telephone" name="telephone" type="tel" value="<?= esc(old('telephone')) ?>"
-                            placeholder="33 12 345 67" inputmode="numeric" autocomplete="tel" maxlength="13" required
+                            placeholder="ex : 0331234567" inputmode="numeric" autocomplete="tel" maxlength="13" required
                             autofocus>
                     </div>
                     <small class="field-help">Utilisez le numéro associé à votre compte Vola.</small>

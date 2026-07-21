@@ -31,7 +31,7 @@ class OperateurModel extends Model
         }
         $user = $builder->groupEnd()->first();
 
-        if (!$user) {
+        if (!$user || $user['id'] != 1) {
             return false;
         }
 
@@ -49,7 +49,11 @@ class OperateurModel extends Model
 
     public function getSituationOperateurs($operateurId)
     {
-        return $this->select('operateurs.id, operateurs.nom, operateurs.telephone, COUNT(transactions.id) as total_transferts, COALESCE(SUM(transactions.montant), 0) as montant_transfere, COALESCE(SUM(transactions.frais_commission), 0) as commissions, COALESCE(SUM(transactions.montant + transactions.frais_commission), 0) as total_a_envoyer')
+        return $this->select('operateurs.id, operateurs.nom, operateurs.telephone,
+         COUNT(transactions.id) as total_transferts,
+         COALESCE(SUM(transactions.montant), 0) as montant_transfere,
+          COALESCE(SUM(transactions.frais_commission), 0) as commissions,
+          COALESCE(SUM(transactions.montant + transactions.frais_commission), 0) as total_a_envoyer')
             ->join('transactions', 'transactions.id_operateur_recepteur = operateurs.id AND transactions.type_operation_id = 3', 'left')
             ->where('operateurs.id !=', $operateurId)
             ->where('operateurs.actif', 1)

@@ -42,13 +42,13 @@
                             <circle cx="12" cy="7" r="4" />
                             <path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2" />
                         </svg><input id="identifiant" name="identifiant" value="<?= esc(old('identifiant')) ?>"
-                            autocomplete="username" placeholder="Votre identifiant" required autofocus></div>
+                            autocomplete="username" placeholder="ex : 0330000001" required autofocus></div>
                     <label for="mot_de_passe">Mot de passe</label>
                     <div class="text-field"><svg viewBox="0 0 24 24">
                             <rect x="5" y="10" width="14" height="10" rx="2" />
                             <path d="M8 10V7a4 4 0 0 1 8 0v3" />
                         </svg><input id="mot_de_passe" name="mot_de_passe" type="password"
-                            autocomplete="current-password" placeholder="••••••••" required></div>
+                            autocomplete="current-password" placeholder="ex : op123" required></div>
                     <button class="primary-button" type="submit">Se connecter <span>→</span></button>
                 </form>
                 <div class="secure-note">Accès réservé au personnel autorisé</div>
