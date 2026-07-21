@@ -121,6 +121,7 @@ class ClientController extends BaseController
         ]);
         $montantParDestinataire = $montant / count($telephones);
         $bool = true;
+        $meme_operateur = 0;
         $operateurReference = null;
         if (count($telephones) > 1) {
             foreach ($telephones as $tel) {
@@ -138,13 +139,16 @@ class ClientController extends BaseController
                 ->with('erreur', 'Tous les destinataires doivent appartenir au même opérateur.');
         }
         if ($bool) {
+
             foreach ($telephones as $telephone) {
-                $operateurRecepteur = $this->prefixeModel->getOperateurParNumero($tel);
-                
-                if($operateurRecepteur !== $operateurReference){
-                    $ajouterFraisRetrait = false;
+                $operateurRecepteur = $this->prefixeModel->getOperateurParNumero($telephone);
+                if ($operateurReference === null) {
+                    $operateurReference = $operateurRecepteur;
+                } elseif ($operateurRecepteur !== $operateurReference) {
+                    $meme_operateur = 1;
                 }
-                if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait)) {
+                echo $meme_operateur;
+                if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montantParDestinataire, $ajouterFraisRetrait, $meme_operateur)) {
 
                     return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
                 }

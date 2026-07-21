@@ -14,16 +14,23 @@ class TransfertModel extends Model
         'client_destinataire_id'
     ];
 
-    public function effectuer($clientId, $telephoneDestinataire, $montant, $ajouterFraisRetrait = false)
+    public function effectuer($clientId, $telephoneDestinataire, $montant, $ajouterFraisRetrait = false, $meme_operateur = true)
     {
         $clientModel = new ClientModel();
         $destinataire = $clientModel->where('telephone', $telephoneDestinataire)->first();
+
         if (!$destinataire) {
             return false;
         }
 
         $expediteur = $clientModel->find($clientId);
+
         $frais = (new FraisModel())->getFrais($montant);
+        $promotionmodel = new PourcentagePromotionModel();
+        $pourcentage_promotion = $promotionmodel->getPourcentagePromotion();
+        if ($meme_operateur == 0) {
+            $frais = $frais - (($pourcentage_promotion) * $frais) / 100;
+        }
         $prefixeModel = new PrefixeModel();
         $operateurExpediteur = $prefixeModel->getOperateurParNumero($expediteur['telephone']);
         $operateurRecepteur = $prefixeModel->getOperateurParNumero($destinataire['telephone']);
@@ -38,7 +45,7 @@ class TransfertModel extends Model
         }
 
         $fraisRetrait = 0;
-        if($ajouterFraisRetrait) {
+        if ($ajouterFraisRetrait) {
             $fraisRetrait = (new FraisModel())->getFraisRetrait($montant);
         }
 
