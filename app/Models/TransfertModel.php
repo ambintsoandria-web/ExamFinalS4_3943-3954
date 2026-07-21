@@ -14,9 +14,12 @@ class TransfertModel extends Model
         'client_destinataire_id'
     ];
 
-    public function effectuer($clientId, $telephoneDestinataire, $montant, $ajouterFraisRetrait = false, $meme_operateur = true)
+    public function effectuer($clientId, $telephoneDestinataire, $montant, $ajouterFraisRetrait = false, $meme_operateur)
     {
         $clientModel = new ClientModel();
+        $clientIdDestinataire = $clientModel->getClientNum($telephoneDestinataire);
+        $epargneModel = new EpargneModel();
+        $pourcentageEpargne = $epargneModel->getPourcentage($clientIdDestinataire);
         $destinataire = $clientModel->where('telephone', $telephoneDestinataire)->first();
 
         if (!$destinataire) {
@@ -48,6 +51,13 @@ class TransfertModel extends Model
         if ($ajouterFraisRetrait) {
             $fraisRetrait = (new FraisModel())->getFraisRetrait($montant);
         }
+        $montantEpargne = $montant * ($pourcentageEpargne / 100);
+        $montant = $montant - ($montant * $pourcentageEpargne / 100);
+        $epargneClientModel = new EpargneClientModel();
+        $epargneClientModel->insert([
+            'client_id' => $clientIdDestinataire,
+            'montant' => $montantEpargne
+        ]);
 
         $montantTotal = $montant + $frais + $fraisCommission + $fraisRetrait;
 

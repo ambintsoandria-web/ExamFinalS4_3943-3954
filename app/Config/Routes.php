@@ -21,6 +21,9 @@ $routes->post('client/retrait', 'ClientController::addRetrait', ['filter' => 'cl
 $routes->get('client/transfert', 'ClientController::goToTransfert', ['filter' => 'clientAuth']);
 $routes->get('client/historique', 'ClientController::goToHistorique', ['filter' => 'clientAuth']);
 $routes->post('client/transfert', 'ClientController::addTransfert', ['filter' => 'clientAuth']);
+$routes->get('client/epargne', 'ClientController::goToEpargne', ['filter' => 'clientAuth']);
+$routes->post('client/addEpargne', 'ClientController::addEpargne', ['filter' => 'clientAuth']);
+
 
 
 $routes->get('operateur/espace', 'OperateurController::dashboard', ['filter' => 'operateurAuth']);

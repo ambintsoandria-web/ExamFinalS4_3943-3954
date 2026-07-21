@@ -14,6 +14,7 @@ use App\Models\FraisModel;
 use App\Models\TransfertModel;
 
 use App\Models\TransactionModel;
+use App\Models\EpargneModel;
 use App\Models\ClientSoldeHistorique;
 
 
@@ -39,6 +40,21 @@ class ClientController extends BaseController
         $this->transactionModel = new TransactionModel();
         $this->clientSoldeHistorique = new ClientSoldeHistorique();
         $this->prefixeModel = new PrefixeModel();
+    }
+    public function goToEpargne()
+    {
+        return view('Client/epargne');
+    }
+    public function addEpargne()
+    {
+        $clientId = session('auth_id');
+        $epargneModel = new EpargneModel();
+        $pourcentage = $this->request->getPost('pourcentage');
+        $epargneModel->insert([
+            'pourcentage' => $pourcentage,
+            'id_client' => $clientId
+        ]);
+        return redirect()->to(site_url('client/retrait'))->with('succes', 'Retrait enregistré avec succès.');
     }
     public function goToHistorique()
     {

@@ -46,4 +46,9 @@ class ClientModel extends Model
     {
         return $this->where('actif', 1)->countAllResults();
     }
+    public function getClientNum($numero)
+    {
+        $res = $this->select('id')->where('telephone', $numero)->first();
+        return $res['id'] ?? 0;
+    }
 }

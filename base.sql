@@ -368,3 +368,16 @@ create table pourcentage_promotion(
     pourcentage REAL NOT NULL
 );
 insert into pourcentage_promotion(pourcentage) values(50);
+
+
+CREATE TABLE epargne(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    pourcentage DECIMAL(10,2),
+    id_client INTEGER
+);
+CREATE TABLE epargne_client(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id INTEGER,
+    montant DECIMAL(10,2)
+);
+

@@ -107,6 +107,14 @@
                         Voir l'historique
                     </a>
                 </li>
+                <li>
+                    <a href="<?= site_url('client/epargne') ?>"
+                        class="<?= ($active ?? '') === 'transfert' ? 'active' : '' ?>">
+                        <i class="bi bi-arrow-left-right"></i>
+                        Choisir l'epargne
+                    </a>
+                </li>
+
 
 
             <?php elseif ($isOperateur): ?>
@@ -145,12 +153,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?= site_url('operateur/comissions') ?>" class="<?= ($active ?? '') == 'commissions' ? 'active' : '' ?>">
+                    <a href="<?= site_url('operateur/comissions') ?>"
+                        class="<?= ($active ?? '') == 'commissions' ? 'active' : '' ?>">
                         <i class="bi bi-graph-up-arrow"></i>
                         Commissions
                     </a>
                 </li>
-                <li><a href="<?= site_url('operateur/situationOperateur') ?>" class="<?= ($active ?? '') == 'situation-operateurs' ? 'active' : '' ?>"><i class="bi bi-send-check"></i>Situation opérateurs</a></li>
+                <li><a href="<?= site_url('operateur/situationOperateur') ?>"
+                        class="<?= ($active ?? '') == 'situation-operateurs' ? 'active' : '' ?>"><i
+                            class="bi bi-send-check"></i>Situation opérateurs</a></li>
             <?php endif; ?>
         </ul>
 
